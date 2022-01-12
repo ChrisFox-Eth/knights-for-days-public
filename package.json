@@ -7,13 +7,13 @@
     "install-all": "yarn && cd smart-contracts && yarn",
     "codegen": "graphql-codegen",
     "dev": "next dev && concurrently \"cd smart-contracts && yarn watch compilation\"",
-    "dev:local-node": "yarn codegen && concurrently \"cd smart-contracts && yarn hardhat node\" \"cd smart-contracts && yarn setup-local\"",
-    "build": "yarn compile && next build",
+    "dev:local-node": "yarn codegen && concurrently \"cd smart-contracts && yarn setup-local\"",
+    "build": "next build",
     "start": "next start",
     "check-types": "tsc --noEmit",
     "lint": "next lint",
     "format": "prettier -w \"./src/**/*.(js|jsx|ts|tsx|json)\"",
-    "compile": "cd smart-contracts && yarn compile",
+    "compile": "yarn compile",
     "test-contract": "cd smart-contracts && yarn test"
   },
   "dependencies": {
