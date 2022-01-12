@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from '~/components/shared/Image';
 import { Link } from '~/components/shared/Link';
-import castle from '/assets/images/castle.png';
+import castle from '~/assets/images/Castle.png';
 
 export const Castle = () => {
   return (
