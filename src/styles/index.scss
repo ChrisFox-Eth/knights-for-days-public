@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwindcss/aspect-ratio;
+@tailwindcss/forms;
+
+@responsive {
+  .text-shadow {
+    text-shadow: 0 0 4px #000;
+  }
+
+  .text-shadow-md {
+    text-shadow: 0 0 8px #000;
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 0 30px #000;
+  }
+
+  .text-shadow-none {
+    text-shadow: none;
+  }
+}
+
+@import "includes/select_search";
+
+/** Fix issue with Next image component adding space below images **/
+.imgfix > div > div {
+    display: block !important;
+}
+
+.text-4xl, .text-lg, .text-2xl {
+  font-family: cursive;
+}
+
+.ratvatar {
+    min-height: 180px;
+    min-width: 180px;
+    height: 180px;
+    width: 180px;
+
+    &-lg {
+        min-height: 220px;
+        min-width: 220px;
+        height: 220px;
+        width: 220px;
+    }
+}
