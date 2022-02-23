@@ -1,31 +1,3 @@
-const dotenv = require('dotenv');
-const path = require('path');
-dotenv.config({ path: path.join(__dirname, '.env.local') });
-
-let hasuraEndoint = `${process.env.NEXT_PUBLIC_HASURA_BASE_URL}/v1/graphql`;
-
-module.exports = {
-  schema: [
-    {
-      [hasuraEndoint]: {
-        headers: {
-          'x-hasura-admin-secret': process.env.HASURA_ADMIN_SECRET,
-        },
-      },
-    },
-  ],
-  documents: ['./src/**/*.ts', './src/**/*.gql'],
-  overwrite: true,
-  generates: {
-    './src/schema/generated.ts': {
-      plugins: [
-        'typescript',
-        'typescript-operations',
-        'typescript-react-apollo',
-      ],
-    },
-    './src/schema/graphql.schema.json': {
-      plugins: ['introspection'],
-    },
-  },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:83857286db8462bdd70e5fd15debdc74e69bd0641f4903cf7ed72f39017c2ba2
+size 718

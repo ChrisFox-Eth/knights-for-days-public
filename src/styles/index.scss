@@ -3,6 +3,7 @@
 @tailwind utilities;
 @tailwindcss/aspect-ratio;
 @tailwindcss/forms;
+@font-face {font-family: 'Cardinal'; src: local('Cardinal'), url(./fonts/Cardinal.ttf) format('ttf');}
 
 @responsive {
   .text-shadow {
@@ -24,13 +25,50 @@
 
 @import "includes/select_search";
 
+
 /** Fix issue with Next image component adding space below images **/
 .imgfix > div > div {
     display: block !important;
 }
 
-.text-4xl, .text-lg, .text-2xl {
-  font-family: cursive;
+.text-scroll {
+  margin:40px;
+}
+.text-4xl, .text-lg, {
+  font-family: fantasy;
+}
+
+.text-2xl {
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+
+.keep {
+    min-height: 520px;
+    min-width: 520px;
+    height: 520px;
+    width: 520px;
+
+    &-lg {
+        min-height: 560px;
+        min-width: 560px;
+        height: 560px;
+        width: 560px;
+    }
+}
+
+.faction {
+    min-height: 360px;
+    min-width: 360px;
+    height: 360px;
+    width: 360px;
+
+    &-lg {
+        min-height: 220px;
+        min-width: 220px;
+        height: 220px;
+        width: 220px;
+    }
 }
 
 .ratvatar {
@@ -44,5 +82,45 @@
         min-width: 220px;
         height: 220px;
         width: 220px;
+    }
+}
+
+@media only screen and (max-width: 60em) {
+  .faction {
+      min-height: 180px;
+      min-width: 180px;
+      height: 180px;
+      width: 180px;
+
+      &-lg {
+          min-height: 220px;
+          min-width: 220px;
+          height: 220px;
+          width: 220px;
+      }
+  }
+  .keep {
+      min-height: 180px;
+      min-width: 180px;
+      height: 180px;
+      width: 180px;
+
+      &-lg {
+          min-height: 220px;
+          min-width: 220px;
+          height: 220px;
+          width: 220px;
+      }
+  }
+    thead th:not(:first-child) {
+        display: none;
+    }
+
+    td, th {
+        display:grid;
+    }
+
+    td[data-th]:before  {
+        content: attr(data-th);
     }
 }

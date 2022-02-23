@@ -1,25 +1,3 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
-  webpack: (config) => {
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: { ...config.resolve.alias, fabric: 'fabric-pure-browser' },
-      },
-    };
-  },
-  reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/default-metadata/:test*',
-        destination: '/default-erc721-token-metadata.json',
-        permanent: true,
-      },
-    ];
-  },
-  images: {
-    domains: ['knightsfordays.com', 'www.knightsfordays.com'],
-  },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d1d5d98a3796b0042868083b5fca81199bf01ea7bc188268fb2bae7cde57aa5
+size 556

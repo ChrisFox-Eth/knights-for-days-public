@@ -7,6 +7,7 @@ import knight03 from '~/assets/images/knights/knight-03.png';
 import knight04 from '~/assets/images/knights/knight-04.png';
 import knight05 from '~/assets/images/knights/knight-05.png';
 import knight06 from '~/assets/images/knights/knight-06.png';
+import mintingSoon from '~/assets/images/knights/minting-soon.png';
 
 export const Hero = () => {
   return (
@@ -20,7 +21,7 @@ export const Hero = () => {
         />
         <div className='text-center justify-center items-center max-w-4xl mx-auto px-4'>
           <h1 className='text-4xl mb-2 font-bold'>
-            A medieval kNFT Project - coming soon to Ethereum
+            The official medieval kNFT of Metania
           </h1>
         </div>
         <div className='w-screen my-12 overflow-hidden'>
@@ -58,10 +59,19 @@ export const Hero = () => {
           </div>
         </div>
         <div className='text-center justify-center items-center max-w-2xl mx-auto px-4'>
-          <p className='text-lg mb-8'>
-          Praesent volutpat augue ac sapien rutrum vestibulum. Sed efficitur nunc gravida mi sagittis, vel ultrices erat suscipit. Sed vel sagittis justo. Morbi ornare malesuada commodo. Nam varius arcu quis fermentum eleifend.
+          <p className='text-lg text-3xl mb-8'>
+          &quot;From Nothing, Something&quot;
           </p>
+          <p className='text-lg mb-8'>
+Knights for Days is a kNFT project for those who love the art of storycrafting, lore, & world building. Let’s all venture into Metania and see how we can make this new world, old again.
+          </p>
+          <Image
+            className='mx-auto md:col-span-6'
+            src={mintingSoon}
+            alt=''
+          />
         </div>
+
       </div>
     </>
   );
